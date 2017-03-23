@@ -1,18 +1,11 @@
+import 'babel-polyfill';
 import React from 'react';
-import {render}from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-
-import App from './components/App';
-import './index.css';
-
-import reducer from './reducers'
-
-const store = createStore(reducer);
+import { render } from 'react-dom';
+import { Router, browserHistory } from 'react-router-dom';
+import routes from './routes';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Router routes={routes} history={browserHistory} />,
   document.getElementById('root')
 );
