@@ -5,8 +5,8 @@ import React  from 'react';
 import {Router, Route, IndexRoute} from 'react-router';
 // import createBrowserHistory from 'history/createBrowserHistory'
 
-import Home from './components/common/Home'
-import About from './components/common/About'
+import Home from './pages/home/Home'
+import About from './pages/about/About'
 import Book from './components/book/Book'
 import App from './App'
 

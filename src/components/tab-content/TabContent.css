@@ -1,0 +1,55 @@
+.tab-content {
+
+}
+
+.tab-content .content-list {
+  /*background-color: aqua;*/
+}
+
+.content-list .content-item {
+  display: block;
+  width: 100%;
+  margin: 1rem auto 0 auto;
+}
+
+.content-list .content-item > a {
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;
+  height: 100%;
+}
+
+.content-list .content-img {
+  margin-left: .5rem;
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.content-img img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.content-list .content-text {
+  /*margin-bottom: 2.8rem;*/
+}
+
+.content-list .content-title {
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555;
+}
+
+.content-list .content-desc {
+  color: #909090;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+}
+
+.content-list .content-desc > div > p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

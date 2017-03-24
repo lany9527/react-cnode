@@ -2,29 +2,39 @@
  * Created by littlestone on 2017/3/24.
  */
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './Nav.css';
 const Nav = () => {
   return (
-    <nav
-      className="nav"
-      data-flex="dir: left main:center cross:center">
-      <ul className="nav-list">
+    <nav className="nav">
+      <ul className="nav-list" data-flex="dir:left main:center box: mean">
         <li className="nav-item"
             data-flex="mean">
-          <Link to="/" className="active">首页</Link>
+          <NavLink exact to="/" activeClassName="active">
+            <i className="icon-home"></i>
+            <span>首页</span>
+          </NavLink>
         </li>
         <li className="nav-item"
             data-flex="mean">
-          <Link to="/about">消息</Link>
+          <NavLink to="/message" activeClassName="active">
+            <i className="icon-bubble"></i>
+            <span>消息</span>
+          </NavLink>
         </li>
         <li className="nav-item"
             data-flex="mean">
-          <Link to="/books">设置</Link>
+          <NavLink to="/setting" activeClassName="active">
+            <i className="icon-setting"></i>
+            <span>设置</span>
+          </NavLink>
         </li>
         <li className="nav-item"
             data-flex="mean">
-          <Link to="/cart">关于</Link>
+          <NavLink to="/about" activeClassName="active">
+            <i className="icon-user"></i>
+            <span>关于</span>
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -1,8 +1,14 @@
-body,div,ul,li,p,span {
+html{
+  font-size: 1rem;
+}
+body,div,ul,li,p,span,h1,h2,h3 {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 ul{
   list-style: none;
+}
+a{
+  text-decoration: none;
 }
