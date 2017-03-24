@@ -217,6 +217,12 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
+axios@^0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.15.3.tgz#2c9d638b2e191a08ea1d6cc988eadd6ba5bdc053"
+  dependencies:
+    follow-redirects "1.0.0"
+
 babel-code-frame@^6.11.0, babel-code-frame@^6.16.0, babel-code-frame@^6.22.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.22.0.tgz#027620bee567a88c32561574e7fd0801d33118e4"
@@ -1494,6 +1500,10 @@ decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
+deep-diff@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.4.tgz#aac5c39952236abe5f037a2349060ba01b00ae48"
+
 deep-extend@~0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.1.tgz#efe4113d08085f4e6f9687759810f807469e2253"
@@ -2131,6 +2141,12 @@ flatten@^1.0.2:
 flex.css@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/flex.css/-/flex.css-1.1.6.tgz#f1f5010913b6c0fcee0d844bffae365c8e0373b9"
+
+follow-redirects@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.0.0.tgz#8e34298cbd2e176f254effec75a1c78cc849fd37"
+  dependencies:
+    debug "^2.2.0"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -4261,6 +4277,10 @@ react-scripts@0.9.0:
   optionalDependencies:
     fsevents "1.0.17"
 
+react-thunk@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-thunk/-/react-thunk-1.0.0.tgz#79813d47f31147e81aee841ed5e76a9e3eabc8b1"
+
 react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
@@ -4353,6 +4373,12 @@ reduce-function-call@^1.0.1:
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
   dependencies:
     balanced-match "^0.4.2"
+
+redux-logger@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.0.tgz#f552052d8992d058cfcdb42b5c654fa5f7beb9cc"
+  dependencies:
+    deep-diff "0.3.4"
 
 redux@^3.6.0:
   version "3.6.0"
