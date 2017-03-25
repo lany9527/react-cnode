@@ -5,6 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {getTopics} from '../../redux/actions/index.action';
 import TabContent from '../../components/tab-content/TabContent';
+import Tabs from '../../components/tabs/Tabs';
 
 class Home extends React.Component {
   constructor(){
@@ -17,6 +18,7 @@ class Home extends React.Component {
     const {topics} = this.props;
     return (
       <div>
+        <Tabs />
         <TabContent topics={topics} />
       </div>
     );
@@ -26,7 +28,7 @@ class Home extends React.Component {
     // if(!isFetching && topics.length === 0){
     //   dispatch(getTopics(selectedTab));
     // }
-    console.log("newProps-->",newProps);
+    // console.log("newProps-->",newProps);
 
   }
   componentDidMount(){
@@ -34,7 +36,7 @@ class Home extends React.Component {
     // if(page === 0){
       dispatch(getTopics(selectedTab));
     // }
-    console.log("Home===>",this.props);
+    // console.log("Home===>",this.props);
   }
 
 };
