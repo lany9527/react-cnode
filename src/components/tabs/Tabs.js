@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom';
 import './Tabs.css';
 
 export default class Tabs extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   state = {
     tabs: [
       {title: '全部', tag: 'all'},

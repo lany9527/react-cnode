@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { connect } from 'react-redux';
-import {selectTab,getTopics} from '../../redux/actions/index.action';
+import {getTopics} from '../../redux/actions/index.action';
 import TabContent from '../../components/tab-content/TabContent';
 
 class Home extends React.Component {
@@ -14,7 +14,7 @@ class Home extends React.Component {
     }
   }
   render(){
-    const {selectedTab,tabData,page, topics} = this.props;
+    const {topics} = this.props;
     return (
       <div>
         <TabContent topics={topics} />
@@ -22,7 +22,7 @@ class Home extends React.Component {
     );
   }
   componentWillReceiveProps(newProps){
-    const {topics,isFetching,selectedTab,dispatch} = newProps;
+    // const {topics,isFetching,selectedTab,dispatch} = newProps;
     // if(!isFetching && topics.length === 0){
     //   dispatch(getTopics(selectedTab));
     // }
@@ -30,7 +30,7 @@ class Home extends React.Component {
 
   }
   componentDidMount(){
-    const {selectedTab,page,dispatch} = this.props;
+    const {selectedTab,dispatch} = this.props;
     // if(page === 0){
       dispatch(getTopics(selectedTab));
     // }
@@ -45,7 +45,9 @@ function mapStateToProps(state) {
   return {
     selectedTab,
     tabData,
-    topics
+    topics,
+    isFetching,
+    page
   }
 }
 export default connect(mapStateToProps)(Home);

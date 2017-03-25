@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import {Router, Route, IndexRoute,Switch} from 'react-router-dom';
+import {Router, Route,Switch} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 const history = createBrowserHistory();
 import { Provider } from 'react-redux';

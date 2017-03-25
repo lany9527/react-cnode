@@ -6,10 +6,10 @@ import {Link} from 'react-router-dom';
 import './TabContent.css';
 
 export default class TabContent extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
+  // constructor(props) {
+  //   super(props);
+  //
+  // }
   state = {
     list: [
       {
