@@ -43,7 +43,7 @@ class Home extends React.Component {
 function mapStateToProps(state) {
   const {homePage} = state;
   const {selectedTab,tabData} = homePage;
-  const {isFetching,page,topics} = tabData[selectedTab] || {isFetching:false,page:0,topics:[]};
+  const {isFetching,page,topics} = tabData[selectedTab] || {isFetching:false,page:0};
   return {
     selectedTab,
     tabData,

@@ -42,36 +42,43 @@ export default class TabContent extends React.Component {
     ]
   };
   render() {
-    return (
-      <div className="tab-content">
-        <ul className="content-list">
-          {this.state.list.map((item, i)=>{
-            return (
-              <li key={i} className="content-item">
-                <Link data-flex="main:left cross:top box:first" to="/">
-                  <div className="content-img">
-                    <img src={item.image} alt=""/>
-                  </div>
-                  <div className="content-text">
-                    <h3 className="content-title">{item.title}</h3>
-                    <div className="content-desc" data-flex="main:left cross:top box:mean">
-                      <div>
-                        <p>{item.tag}</p>
-                        <p>{item.share}/{item.read}</p>
-                      </div>
-                      <div>
-                        <p>{item.name}</p>
-                        <p>{item.time}</p>
+    const {topics} = this.props;
+    if (topics !== undefined){
+      return (
+        <div className="tab-content">
+          <ul className="content-list">
+            {topics.data.map((item, i)=>{
+              return (
+                <li key={i} className="content-item">
+                  <Link data-flex="main:left cross:top box:first" to="/">
+                    <div className="content-img">
+                      <img src={item.author.avatar_url} alt=""/>
+                    </div>
+                    <div className="content-text">
+                      <h3 className="content-title">{item.title}</h3>
+                      <div className="content-desc" data-flex="main:left cross:top box:mean">
+                        <div>
+                          <p>{item.tab}</p>
+                          <p>{item.reply_count}/{item.visit_count}</p>
+                        </div>
+                        <div>
+                          <p>{item.author.loginname}</p>
+                          <p>{(item.create_at).split('.').splice(0,1).join('').split('T').join(' ')}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    )
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      )
+    }else {
+      return (
+        <div></div>
+      )
+    }
   }
   componentDidMount(){
     console.log("tab-content==>",this.props);
