@@ -4,7 +4,8 @@ import { render } from 'react-dom';
 import {Router, Route, IndexRoute,Switch} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 const history = createBrowserHistory();
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
+import store from './redux/store/store';
 
 import 'flex.css/dist/data-flex.css';
 import './index.css';
@@ -17,15 +18,17 @@ import Message from "./pages/message/Message";
 import Setting from "./pages/setting/Setting";
 
 render(
-  <Router history={history}>
-    <App>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/message" component={Message}></Route>
-        <Route path="/setting" component={Setting}></Route>
-        <Route path="/about" component={About}></Route>
-      </Switch>
-    </App>
-  </Router>,
+  <Provider store={store}>
+    <Router history={history}>
+      <App>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/message" component={Message}></Route>
+          <Route path="/setting" component={Setting}></Route>
+          <Route path="/about" component={About}></Route>
+        </Switch>
+      </App>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );

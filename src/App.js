@@ -1,5 +1,5 @@
 import React  from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import './App.css'
 
@@ -11,19 +11,9 @@ const App = (props) => {
     <div className="app-container">
       <Tabs />
       <Nav />
-      {/* Each smaller components */}
-      <ReactCSSTransitionGroup
-        transitionName="fade"
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
-      >
-        {React.cloneElement(props.children)}
-      </ReactCSSTransitionGroup>
+        {props.children}
     </div>
   );
 };
-function getSubstringUntilNth(str, pattern, n) {
-  return  str.split(pattern, n).join(pattern);
-}
 
 export default App

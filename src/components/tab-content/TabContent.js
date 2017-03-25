@@ -8,6 +8,7 @@ import './TabContent.css';
 export default class TabContent extends React.Component {
   constructor(props) {
     super(props);
+
   }
   state = {
     list: [
@@ -71,5 +72,8 @@ export default class TabContent extends React.Component {
         </ul>
       </div>
     )
+  }
+  componentDidMount(){
+    console.log("tab-content==>",this.props);
   }
 }

@@ -3,12 +3,12 @@
  */
 import {applyMiddleware, createStore, compose} from 'redux';
 
-import createLogger from 'react-logger';
-import thunk from 'react-thunk';
+import { createLogger } from 'redux-logger';
+import ReduxThunk from 'redux-thunk'
 import reducer from '../reducers/rootReducer';
 
 let enhancer = compose(
-  applyMiddleware(thunk, createLogger())
+  applyMiddleware(ReduxThunk, createLogger())
 );
 
 export default createStore(reducer, enhancer);
