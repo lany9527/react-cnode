@@ -18,6 +18,11 @@ export default class Tabs extends React.Component {
       {title: '招聘', tag: 'job'},
     ]
   };
+  onChangeTabs(tab) {
+    console.log("tabs 组件==》",tab)
+    this.props.onChangeTabs(tab);
+  }
+
   render() {
     return (
       <nav
@@ -26,8 +31,12 @@ export default class Tabs extends React.Component {
         <ul className="tabs-list">
           {this.state.tabs.map((item,i)=>{
             return (
-              <li key={item.tag} className="tabs-item"
-                  data-flex="mean">
+              <li key={item.tag}
+                  className="tabs-item"
+                  data-flex="mean"
+                  onClick={()=>{
+                    this.onChangeTabs(item.tag)
+                  }}>
                 <Link to="/" className="active">{item.title}</Link>
               </li>
             )

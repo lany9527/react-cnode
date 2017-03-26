@@ -10,7 +10,7 @@ export const RECORD_SCROLLT='RECORD_SCROLLT';
 export const selectTab = tab => ({
   type:SELECT_TAB,
   tab
-})
+});
 const requestTopics = tab => ({
   type: REQUEST_TOPICS,
   tab
@@ -42,4 +42,4 @@ export const recordScrollT = (tab,scrollT) => {
     tab,
     scrollT
   })
-}
+};
