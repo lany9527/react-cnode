@@ -17,9 +17,9 @@ const Nav = () => {
         </li>
         <li className="nav-item"
             data-flex="mean">
-          <NavLink to="/message" activeClassName="active">
+          <NavLink to="/todo" activeClassName="active">
             <i className="icon-bubble"></i>
-            <span>消息</span>
+            <span>Todo</span>
           </NavLink>
         </li>
         <li className="nav-item"

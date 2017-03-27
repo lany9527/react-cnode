@@ -14,7 +14,7 @@ import './static/iconfont/style.css';
 import App from './App';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
-import Message from "./pages/message/Message";
+import Todo from "./pages/todo/Todo";
 import Setting from "./pages/setting/Setting";
 
 render(
@@ -22,8 +22,8 @@ render(
     <Router history={history}>
       <App>
         <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route path="/message" component={Message}></Route>
+          <Route exact path="/" component={Todo}></Route>
+          <Route path="/todo" component={Todo}></Route>
           <Route path="/setting" component={Setting}></Route>
           <Route path="/about" component={About}></Route>
         </Switch>

@@ -5,10 +5,10 @@ import {applyMiddleware, createStore, compose} from 'redux';
 
 import { createLogger } from 'redux-logger';
 import ReduxThunk from 'redux-thunk'
-import reducer from '../reducers/rootReducer';
+import rootReducer from '../reducers/rootReducer';
 
 let enhancer = compose(
   applyMiddleware(ReduxThunk, createLogger())
 );
 
-export default createStore(reducer, enhancer);
+export default createStore(rootReducer, enhancer);

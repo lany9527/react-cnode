@@ -43,7 +43,7 @@ export default class TabContent extends React.Component {
   };
   render() {
     const {topics} = this.props;
-    if (topics !== undefined){
+    if (topics){
       return (
         <div className="tab-content">
           <ul className="content-list">

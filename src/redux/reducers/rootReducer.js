@@ -3,9 +3,12 @@
  */
 import {combineReducers} from 'redux';
 import homePage  from './home.reducer';
+import {visibilityFilter,todos} from './todo.reducer';
 
 const rootReducer = combineReducers({
-  homePage
+  homePage,
+  visibilityFilter,
+  todos
 });
 
 export default rootReducer;

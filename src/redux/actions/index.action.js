@@ -22,15 +22,15 @@ const receiveTopics = (tab, topics, page, limit) => ({
   page,
   limit
 });
-export const getTopics = (tab, page = 0, limit = 20) => {
+export const getTopics = (tab='all', page = 0, limit = 20) => {
   return dispatch => {
     dispatch(requestTopics(tab));
     axios.get(`https://cnodejs.org/api/v1/topics?tab=${tab}&page=${page}&limit=${limit}`)
       .then(res => {
         console.log("在action里面的请求结果：",res.data)
-        return res.data;
+        return res;
       })
-      .then(res => dispatch(receiveTopics(tab, res, page, limit)))
+      .then(res => dispatch(receiveTopics(tab, res.data, page, limit)))
       .catch(function (error) {
         console.log(error);
       });
